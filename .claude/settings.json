@@ -2,15 +2,18 @@
   "permissions": {
     "deny": [
       "Bash(rm -rf *)",
+      "Bash(sudo rm *)",
       "Bash(curl *|*)",
       "Bash(wget *|*)",
+      "Bash(git push *--force*)",
+      "Bash(git reset *--hard*)",
+      "Bash(git clean *-fd*)",
       "Write(.env*)",
       "Edit(.env*)",
       "Write(.github/workflows/**)",
       "Edit(.github/workflows/**)"
     ],
     "ask": [
-      "Bash",
       "Write",
       "Edit"
     ],
@@ -19,11 +22,30 @@
       "LS",
       "Glob",
       "Grep",
-      "Bash(git status)",
-      "Bash(git diff*)",
+
       "Bash(pwd)",
       "Bash(ls*)",
-      "Bash(find*)"
+      "Bash(tree*)",
+      "Bash(find*)",
+      "Bash(cat *)",
+      "Bash(head *)",
+      "Bash(tail *)",
+      "Bash(grep *)",
+      "Bash(rg *)",
+
+      "Bash(git status*)",
+      "Bash(git diff*)",
+      "Bash(git log*)",
+      "Bash(git branch*)",
+
+      "Bash(just fmt)",
+      "Bash(just lint)",
+      "Bash(just test)",
+      "Bash(just smoke)",
+      "Bash(just check)",
+      "Bash(pytest*)",
+      "Bash(npm test*)",
+      "Bash(pnpm test*)"
     ]
   },
   "hooks": {
