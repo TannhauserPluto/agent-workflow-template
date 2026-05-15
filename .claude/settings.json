@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "deny": [
+      "Bash(rm -rf *)",
+      "Bash(curl *|*)",
+      "Bash(wget *|*)",
+      "Write(.env*)",
+      "Edit(.env*)",
+      "Write(.github/workflows/**)",
+      "Edit(.github/workflows/**)"
+    ],
+    "ask": [
+      "Bash",
+      "Write",
+      "Edit"
+    ],
+    "allow": [
+      "Read",
+      "LS",
+      "Glob",
+      "Grep",
+      "Bash(git status)",
+      "Bash(git diff*)",
+      "Bash(pwd)",
+      "Bash(ls*)",
+      "Bash(find*)"
+    ]
+  }
+}
