@@ -1,0 +1,5 @@
+.agent-logs/
+.checkpoints/
+.env
+.env.*
+*.log
