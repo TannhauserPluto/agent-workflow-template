@@ -33,3 +33,8 @@ You are the executor, not the planner.
 - Do not expand scope beyond the plan.
 - At the end of a milestone, run `just check`.
 - Before PR, run Codex Reviewer with `scripts/run_codex_reviewer.sh <feature-slug>`.
+
+## Task startup
+- New tasks should be initialized from `main` using `scripts/start_agent_task.sh`.
+- After startup, Claude Code should run inside the generated worktree.
+- Do not initialize new feature tasks manually unless the startup script fails.
