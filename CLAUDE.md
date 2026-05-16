@@ -26,3 +26,10 @@ You are the executor, not the planner.
 - Checkpoints are created automatically before Bash, Write, and Edit tool use.
 - If changes become inconsistent, suggest restoring the latest checkpoint instead of continuing blindly.
 - At milestone boundaries, summarize changed files, tests run, risks, and next step.
+
+## Spec-plan execution rules
+- Do not start implementation unless an active spec and plan exist.
+- Read the active spec and plan before editing.
+- Do not expand scope beyond the plan.
+- At the end of a milestone, run `just check`.
+- Before PR, run Codex Reviewer with `scripts/run_codex_reviewer.sh <feature-slug>`.
