@@ -20,3 +20,10 @@
 - Use checkpoint scripts before risky or broad changes.
 - If a task goes off track, prefer restoring a checkpoint or deleting the task worktree instead of trying to repair main.
 - Main must stay clean and synchronized with origin/main.
+
+## Spec-plan-review workflow
+- Codex Planner produces and updates `specs/<feature>.md` and `plans/<feature>-plan.md`.
+- Claude Code executes only after the spec and plan exist.
+- Codex Reviewer is read-only and reviews diff, tests, and risks before PR.
+- Reviewer must compare implementation against the active spec and plan.
+- If reviewer returns REQUEST_CHANGES, fix before opening or merging PR.
