@@ -27,3 +27,9 @@
 - Codex Reviewer is read-only and reviews diff, tests, and risks before PR.
 - Reviewer must compare implementation against the active spec and plan.
 - If reviewer returns REQUEST_CHANGES, fix before opening or merging PR.
+
+## One-command task startup
+- Use `scripts/start_agent_task.sh <feature-slug> "<request>"` to initialize new tasks.
+- The script must be run from clean `main`.
+- It creates a feature branch, task worktree, and initial spec/plan skeleton.
+- After task creation, execution should continue inside the generated worktree.
