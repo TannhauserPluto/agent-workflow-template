@@ -38,3 +38,17 @@ You are the executor, not the planner.
 - New tasks should be initialized from `main` using `scripts/start_agent_task.sh`.
 - After startup, Claude Code should run inside the generated worktree.
 - Do not initialize new feature tasks manually unless the startup script fails.
+
+## Executor stuck protocol
+
+- If implementation becomes stuck, stop editing immediately.
+- Do not continue blindly editing into a failing state.
+- Run diagnosis to capture the failure state:
+  - scripts/failure_checkpoint.sh
+  - scripts/agent_diagnose_stuck.sh --feature <slug>
+- Create an escalation bundle and present it to Codex high:
+  - scripts/escalate_to_codex.sh --feature <slug>
+- Do not independently choose destructive recovery.
+- Recovery decisions, including checkpoint restore, rescue branch, reset-current, and rollback strategy, belong to Codex high.
+- After Codex high selects a recovery path, execute only the chosen command.
+- Prefer rescue branches with --new-branch over rewriting the current branch with --reset-current.
