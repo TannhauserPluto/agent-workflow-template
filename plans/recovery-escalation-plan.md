@@ -289,3 +289,15 @@ If split is needed:
 1. PR 1: diagnosis script plus docs and instruction updates.
 2. PR 2: recovery script and escalation bundle script.
 3. PR 3: reviewer/check integration and smoke-test hardening.
+
+## Validation report
+
+This task includes a committed validation report:
+
+- docs/recovery-escalation-validation.md
+
+Purpose:
+
+- Record smoke tests performed for the recovery and escalation workflow.
+- Make behavior evidence reviewable without committing runtime artifacts from .agent-logs/ or .agent-escalation/.
+- Document which high-risk paths were validated and which destructive paths were intentionally not executed.

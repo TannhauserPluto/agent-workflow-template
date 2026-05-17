@@ -96,3 +96,15 @@ Add stuck diagnosis, safe recovery, and Codex escalation workflow scripts.
 - Revert this feature by removing the three new scripts, the new recovery workflow doc, and the role-boundary additions in `AGENTS.md` and `CLAUDE.md`.
 - Generated runtime artifacts in `.agent-logs/` and `.agent-escalation/` are disposable local evidence and can be ignored or removed after review.
 - If implementation changes break the workflow, use the existing checkpoint scripts or create a new rescue branch from the pre-feature commit rather than rewriting `main`.
+
+## Validation report
+
+This task includes a committed validation report:
+
+- docs/recovery-escalation-validation.md
+
+Purpose:
+
+- Record smoke tests performed for the recovery and escalation workflow.
+- Make behavior evidence reviewable without committing runtime artifacts from .agent-logs/ or .agent-escalation/.
+- Document which high-risk paths were validated and which destructive paths were intentionally not executed.
